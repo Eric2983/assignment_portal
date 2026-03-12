@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2>Submitted Assignments</h2>
+
+<table border="1">
+
+<tr>
+<th>Name</th>
+<th>Index</th>
+<th>Course</th>
+<th>Time</th>
+<th>Download</th>
+</tr>
+
+{% for s in submissions %}
+
+<tr>
+<td>{{ s[1] }}</td>
+<td>{{ s[2] }}</td>
+<td>{{ s[3] }}</td>
+<td>{{ s[5] }}</td>
+
+<td>
+<a href="/download/{{ s[4] }}">Download</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment Submission</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2>Submit Assignment</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="text" name="index" placeholder="Index Number" required>
+
+<input type="text" name="course" placeholder="Course Code" required>
+
+<input type="file" name="file" required>
+
+<button type="submit">Submit Assignment</button>
+
+</form>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<p>{{ messages[0] }}</p>
+{% endif %}
+{% endwith %}
+
+</body>
+</html>
